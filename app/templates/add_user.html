@@ -6,7 +6,6 @@
     <title>New User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 </head>
 <body>
     <form method="post" action="/post_user">
@@ -16,5 +15,12 @@
         <input id="email" name="email" type="text" />
         <input type="submit" />
     </form>
+    <h2>All Users</h2>
+    <ul>
+    {%for user in allUsers%}
+        <li>ID: {{user.id}} NAME: {{user.username}} EMAIL: {{user.email}}</li>
+    {%endfor%}
+    </ul>
+
 </body>
 </html>
